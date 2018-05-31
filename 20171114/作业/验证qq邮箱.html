@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+
+<body>
+  <input type="text" id='text'>
+  <button id="btn">验证</button>
+  <script>
+    const wy = {
+      text: document.getElementById('text'),
+      btn: document.getElementById('btn'),
+    }
+    wy.btn.onclick = function () {
+    validation();
+    }
+    window.onkeyup = function (e) {
+      if (e.keyCode === 13) {
+       validation();
+      }
+    }
+    function validation(){
+        const { text } = wy;
+        const { value } = text;
+        const c = value.replace(/^\d{5,11}@qq/.com$/g, 'true')
+        if (c === 'true') {
+          alert('验证成功');
+        } else {
+          alert('验证失败');
+        }
+    }
+  </script>
+  <!-- fuqiang@miaov.com -->
+</body>
+jie  guo想加全局用match
+</html>

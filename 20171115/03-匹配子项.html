@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     * 匹配子项
+     * 使用了分组之后，从左向右看，每一个小括号代表一个子项，顺序是一次排开的
+     */
+    
+    // 2017-11-15  ===> 11/15/2017
+    
+    // console.log('2017-11-15'.replace(/(\d{4}(-))(\d{2})-(\d{2})/, '$2'));
+    
+    console.log('2017-11-15'.replace(/(\d{4})-(\d{2})-(\d{2})/, '$2/$3/$1'));
+    
+  </script>
+</body>
+</html>

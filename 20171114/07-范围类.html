@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     * 范围类，用来匹配某个区间的所有字符
+     * 例如: [a-z] 代表匹配 a到z的26个小写字符 [0-9]代表匹配0-9之间的任意数字
+     */
+    
+    var str = '@a1@b2$c3&z4';
+    
+    console.log(str.replace(/[^a-z0-9]/g, '='));
+    
+  </script>
+</body>
+</html>

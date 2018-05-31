@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <input id="text" type="text">
+  <input id="btn" type="button" value="查找">
+  <p>
+    字符是：<span id="info"></span>
+    <br>
+    次数是：<span id="num"></span>
+  </p>
+  <script>
+    const text = document.getElementById('text');
+    const btn = document.getElementById('btn');
+    const info = document.getElementById('info');
+    const num = document.getElementById('num');
+    
+    const reg = /(\w)\1+/g;
+    // aaaabbbbbeeeccf123ddd
+    
+    btn.onclick = function (){
+      const val = text.value;
+      let n = 0, target;
+      val.replace(reg, (match, $1) => {
+        if(n < match.length){
+          n = match.length;
+          target = $1;
+        }
+      });
+      info.innerHTML = target;
+      num.innerHTML = n;
+    };
+
+  </script>
+</body>
+</html>

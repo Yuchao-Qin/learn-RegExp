@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     * \1表示重复正则第一个圆括号内匹配到的内容
+     * \2表示重复正则第二个圆括号内匹配到的内容
+     * ...
+     * \9
+     */
+    
+    // 1221
+    
+    // const reg = /1221/;
+    const reg = /(1)(2)\2\1/;
+    
+    console.log(reg.test('1221'));
+    
+    
+    
+  </script>
+</body>
+</html>

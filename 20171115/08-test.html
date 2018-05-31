@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     * reg.test('str') 用来测试某个字符串,
+     * 如果通过测试了返回true，否则就返回false
+     */
+    
+    // var str1 = '12347';
+    // var str2 = '12345a';
+    
+    // var reg = /^[1-9]\d{4,9}$/;
+    
+    // console.log(reg.test(str1));
+    // console.log(reg.test(str2));
+    
+    // ---------------------------------------
+    // var str = 'a1b2c3';
+    // var reg = /\d/g;
+    // while(reg.test(str)){
+    //   console.log(reg.lastIndex);
+    // }
+    
+    // /\d/g.test('a1b2c3')  这样做可以每次都返回true，但是不推荐，原因每次都要向内存新申请一个对象需要的空间。
+    // 实际上，使用test就是为了测试字符串是否是符合规则的，所有不要加 全局 标志
+    debugger;
+    var str = 'a1b2c3';
+  var reg = /\d/g;
+ console.log( reg.test(str),reg.lastIndex);
+
+    // exec
+  </script>
+</body>
+</html>

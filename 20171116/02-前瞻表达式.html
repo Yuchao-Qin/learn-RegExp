@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     * (?=exp) 正向前瞻 匹配后面满足表达式exp的位置
+     * (?!exp) 负向前瞻 匹配后面不满足表达式exp的位置
+     */
+    
+    const str = 'Hello, he is say hi, ni shuo ta shi bu shi sha!';
+    
+    // const ret = str.replace(/\w(?=i)/g, 'X');
+    // 
+    // console.log(ret);
+    
+    console.log(str.replace(/s(?!a)/g, 'X'));
+    
+    
+    
+    
+  </script>
+</body>
+</html>

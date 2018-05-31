@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <script>
+    /**
+     *  . :[^\r\n] 除了回车和换行符之外的所有字符
+     * \d :[0-9] 数字字符
+     * \D :[^0-9] 非数字字符
+     * \s :空白字符
+     * \S :非空白字符
+     * \w :[0-9a-zA-Z_]单词字符（字母、数字、下划线）
+     * \W :[^0-9a-zA-Z_]非单词字符
+     * ^ : 以xxx开始
+     * $ : 以xxx结束
+     * \b: 单词边界
+     * \B: 非单词边界
+     */
+    
+    // var str = 'a^&def';
+    // 
+    // console.log(str.replace(/a../g, '='));
+    
+    
+    // var str = 'a1b2c3';
+    // 
+    // console.log(str.replace(/\d/g, '='));
+    
+    // var str = '  a b c   ';
+    // 
+    // console.log(str.replace(/\s/g, ''));
+    
+    // '  a b   '.replace(/^\s+|\s+$/g, '');  // ===> trim
+    
+    // var str = 'a lovely boy say it is a dog';
+    
+    // console.log(str.replace(/\ba\b/g, 'A'));   即是以a 开头  又是以a 结尾的
+    // console.log(str.replace(/\Ba\B/g, 'A'));
+    
+    // -------------------------------------------------
+    // var str = '@a1\n@a2\n@a3';
+    
+    // console.log(str);
+    
+    /**
+     *  "@a1
+     *   @a2
+     *   @a3"
+     */
+    
+    // console.log(str.replace(/^@/gm, ''));
+    
+    // -------------------------------------------------
+    var str = 'this is a girl';
+    
+    // console.log(str.replace(/\Bis\b/g, 'IS'));
+    
+    const reg = new RegExp('\\Bis\\b', 'g');
+
+    console.log(str.replace(reg, 'IS'));
+    
+    
+  </script>
+</body>
+</html>
